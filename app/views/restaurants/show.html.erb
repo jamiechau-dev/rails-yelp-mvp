@@ -1,0 +1,19 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category.capitalize %></p>
+<img src="https://picsum.photos/200/200" alt="">
+
+<p><%= link_to "Go Back", restaurants_path %></p>
+
+<hr>
+
+<h1>Reviews</h1>
+
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Leave a Review", new_restaurant_review_path(@restaurant) %></p>
