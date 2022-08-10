@@ -13,7 +13,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
 
     if @restaurant.save
-      redirect_to @restaurant, notice: "Restaurant was reated."
+      redirect_to @restaurant, notice: "Restaurant was Created."
     else
       render :new, status: :unprocessable_entity
     end
